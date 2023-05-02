@@ -1,0 +1,12 @@
+<p>customerform works!</p>
+
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <label for="first-name">First Name : </label>
+    <input id="first-name" type="text" formControlName="firstName">
+    <label for="last-name">Last Name : </label>
+    <input id="last-name" type="text" formControlName="lastName">
+    <label for="birth-date">Birth Date : </label>
+    <input id="birth-date" type="text" formControlName="birthDate">
+    <p>Please complete form to submit</p>
+    <button type="submit">Submit</button>
+</form>

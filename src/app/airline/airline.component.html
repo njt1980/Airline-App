@@ -1,0 +1,25 @@
+<p>airline works!</p>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Airline Id</th>
+            <th scope="col">Airline Name</th>
+            <th scope="col">Airline Code</th>
+            <th scope="col">Base Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let airline of airlines">
+            <td>{{ airline.airlineId }}</td>
+            <td>{{ airline.airlineName }}</td>
+            <td>{{ airline.airlineCode }}</td>
+            <td>{{ airline.baseLocation }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<app-airlineform></app-airlineform>

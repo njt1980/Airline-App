@@ -1,0 +1,19 @@
+<p>flightform works!</p>
+<form [formGroup]="flightForm" (ngSubmit)="onSubmit()">
+    <label for="flight-code">Flight Code : </label>
+    <input id="flight-code" type="text" formControlName="flightCodeControl">
+    <label for="origin">Origin : </label>
+    <input id="origin" type="text" formControlName="originControl">
+    <label for="destination">Destination : </label>
+    <input id="destination" type="text" formControlName="destinationControl">
+    <label for="numofseats">Num of Seats : </label>
+    <input id="numofseats" type="text" formControlName="numOfSeatsControl">
+    <label for="reservedseats">Reserved Seats : </label>
+    <input id="reservedseats" type="text" formControlName="reservedSeatsControl">
+    <label for="flightstatus">Flight Status : </label>
+    <input id="flightstatus" type="text" formControlName="flightStatusControl">
+    <label for="airlineid">Airline Id : </label>
+    <input id="airlineid" type="number" formControlName="airlineIdControl">
+    <p>Please complete form to submit</p>
+    <button type="submit">Submit</button>
+</form>

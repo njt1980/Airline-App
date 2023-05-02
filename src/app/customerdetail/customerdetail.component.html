@@ -1,0 +1,11 @@
+<p>customerdetail works!</p>
+<div *ngIf="customer">
+
+    <div>Customer Id : {{ customer.customerId }}</div>
+    <div>First Name : <input type="text" [(ngModel)]="customer.firstName" [disabled]="true"></div>
+    <div>Last Name :
+    <input type="text" [(ngModel)]="customer.lastName" [disabled]="true"></div>
+    <div>Birth Date :
+    <input type="text" [(ngModel)]="customer.birthDate" [disabled]="true"></div>
+    <button type="button" (click)="goBack()">Back</button>
+</div>

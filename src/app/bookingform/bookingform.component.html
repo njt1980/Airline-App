@@ -1,0 +1,25 @@
+<p>bookingform works!</p>
+
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+    <label for="bookingcode">Booking Code : </label>
+    <input id="bookingcode" type="text" formControlName="bookingCode">
+    <label for="customerid">Customer Id : </label>
+    <input id="customerid" type="text" formControlName="customerId">
+    <label for="flightid">Flight Id : </label>
+    <input id="flightid" type="text" formControlName="flightId">
+    <div formArrayName="passengers">
+        <h6>Passengers</h6>
+        <button type="button" (click)="addPassenger()">+ Add Passenger</button>
+        <div *ngFor="let passenger of passengers.controls;let i=index">
+            <div [formGroupName]="i">
+                {{ i }}
+                First Name:
+                <input type="text" formControlName="firstName">
+                Last Name:
+                <input type="text" formControlName="lastName">
+                <button type="button" (click)="removePassenger(i)">- Remove</button>
+            </div>
+        </div>
+    </div>
+    <button type="submit">Book</button>
+</form>

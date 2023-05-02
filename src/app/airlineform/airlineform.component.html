@@ -1,0 +1,14 @@
+<p>airlineform works!</p>
+
+<form [formGroup]="airlineForm" (ngSubmit)="onSubmit()">
+    <label for="airline-name">Airline Name : </label>
+    <input id="airline-name" type="text" formControlName="airlineName">
+    <label for="airline-code">Airline Code : </label>
+    <input id="airline-code" type="text" formControlName="airlineCode">
+    <label for="base-location">Base Location : </label>
+    <input id="base-location" type="text" formControlName="baseLocation">
+    <p>Please complete form to submit</p>
+    <button type="submit">Submit</button>
+</form>
+
+    
